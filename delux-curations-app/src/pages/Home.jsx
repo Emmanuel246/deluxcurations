@@ -1,139 +1,174 @@
 import { Link } from 'react-router-dom'
-import { ArrowRight, Star, Users, Calendar, Zap, Sparkles, Award, Clock } from 'lucide-react'
+import { ArrowRight, Star, Users, Calendar, Zap, Sparkles, Award, Clock, Play, CheckCircle, Tent, Video, Camera, Heart, Trophy, Shield } from 'lucide-react'
 
 const Home = () => {
   return (
     <div className="home">
       {/* Hero Section */}
-      <section className="hero">
+      <section className="hero-modern">
+        <div className="hero-background-overlay"></div>
         <div className="container">
-          <div className="hero-container">
-            <div className="hero-content">
-              <h1 className="hero-title">
-                Luxury Event Experiences with <span className="highlight">Delux Curations</span>
+          <div className="hero-container-modern">
+            <div className="hero-content-modern">
+              <div className="hero-badge">
+                <Star size={16} />
+                <span>Premium Event Specialists Since 2020</span>
+              </div>
+              <h1 className="hero-title-modern">
+                Create <span className="gradient-text">Unforgettable</span><br />
+                Event Experiences
               </h1>
-              <p className="hero-subtitle">
-                Transform your special moments with premium marquee rentals, professional lighting,
-                and cutting-edge 360° videobooth technology. Creating unforgettable memories for
-                weddings, corporate events, and celebrations.
+              <p className="hero-subtitle-modern">
+                From luxury marquee rentals to cutting-edge 360° videobooth technology,
+                we transform ordinary moments into extraordinary memories that last a lifetime.
               </p>
-              <div className="hero-buttons">
-                <Link to="/book-marquee" className="btn btn-primary btn-large">
-                  Book Marquee <ArrowRight size={20} />
+              <div className="hero-buttons-modern">
+                <Link to="/book-marquee" className="btn-hero-primary">
+                  <Tent size={20} />
+                  <span>Book Marquee</span>
+                  <ArrowRight size={18} />
                 </Link>
-                <Link to="/book-videobooth" className="btn btn-secondary btn-large">
-                  Book 360° Videobooth
+                <Link to="/book-videobooth" className="btn-hero-secondary">
+                  <Play size={20} />
+                  <span>360° Videobooth</span>
                 </Link>
               </div>
-              <div className="hero-stats">
-                <div className="hero-stat">
-                  <span className="hero-stat-number">500+</span>
-                  <span className="hero-stat-label">Events</span>
+              <div className="hero-features">
+                <div className="hero-feature">
+                  <CheckCircle size={16} />
+                  <span>Professional Setup</span>
                 </div>
-                <div className="hero-stat">
-                  <span className="hero-stat-number">50+</span>
-                  <span className="hero-stat-label">Venues</span>
+                <div className="hero-feature">
+                  <CheckCircle size={16} />
+                  <span>Premium Quality</span>
                 </div>
-                <div className="hero-stat">
-                  <span className="hero-stat-number">5★</span>
-                  <span className="hero-stat-label">Rating</span>
+                <div className="hero-feature">
+                  <CheckCircle size={16} />
+                  <span>Full Service Support</span>
                 </div>
               </div>
             </div>
-            <div className="hero-visual">
-              <div className="hero-image-container">
-                <div className="hero-placeholder">
-                  <Sparkles size={80} />
-                  <p>Premium Event Experience</p>
+
+            <div className="hero-visual-modern">
+              <div className="hero-cards-grid">
+                <div className="hero-service-card hero-card-1">
+                  <div className="hero-card-icon">
+                    <Tent size={32} />
+                  </div>
+                  <h4>Luxury Marquees</h4>
+                  <p>Premium weather-resistant marquees for any occasion</p>
+                  <div className="card-glow"></div>
+                </div>
+                <div className="hero-service-card hero-card-2">
+                  <div className="hero-card-icon">
+                    <Video size={32} />
+                  </div>
+                  <h4>360° Videobooth</h4>
+                  <p>Cutting-edge video technology for memorable moments</p>
+                  <div className="card-glow"></div>
+                </div>
+                <div className="hero-service-card hero-card-3">
+                  <div className="hero-card-icon">
+                    <Zap size={32} />
+                  </div>
+                  <h4>Professional Lighting</h4>
+                  <p>Transform your event atmosphere with expert lighting</p>
+                  <div className="card-glow"></div>
                 </div>
               </div>
 
-              {/* Floating Cards */}
-              <div className="hero-floating-card hero-floating-card-1">
-                <div className="floating-card-content">
-                  <div className="floating-card-icon">
-                    <Award size={20} />
-                  </div>
-                  <div>
-                    <div style={{fontSize: '0.75rem', color: 'var(--neutral-500)'}}>Premium Quality</div>
-                    <div>5-Star Service</div>
-                  </div>
+              <div className="hero-stats-modern">
+                <div className="stat-item">
+                  <div className="stat-number">500+</div>
+                  <div className="stat-label">Successful Events</div>
                 </div>
-              </div>
-
-              <div className="hero-floating-card hero-floating-card-2">
-                <div className="floating-card-content">
-                  <div className="floating-card-icon">
-                    <Clock size={20} />
-                  </div>
-                  <div>
-                    <div style={{fontSize: '0.75rem', color: 'var(--neutral-500)'}}>Quick Setup</div>
-                    <div>Same Day Service</div>
-                  </div>
+                <div className="stat-item">
+                  <div className="stat-number">98%</div>
+                  <div className="stat-label">Client Satisfaction</div>
                 </div>
-              </div>
-
-              <div className="hero-floating-card hero-floating-card-3">
-                <div className="floating-card-content">
-                  <div className="floating-card-icon">
-                    <Zap size={20} />
-                  </div>
-                  <div>
-                    <div style={{fontSize: '0.75rem', color: 'var(--neutral-500)'}}>Latest Tech</div>
-                    <div>360° Video Booth</div>
-                  </div>
+                <div className="stat-item">
+                  <div className="stat-number">24/7</div>
+                  <div className="stat-label">Support Available</div>
                 </div>
               </div>
             </div>
           </div>
         </div>
+        <div className="hero-scroll-indicator">
+          <div className="scroll-arrow"></div>
+          <span>Discover More</span>
+        </div>
       </section>
 
-      {/* Services Overview */}
-      <section className="services-overview">
+      {/* Services Showcase */}
+      <section className="services-showcase">
         <div className="container">
-          <h2 className="section-title">Our Premium Services</h2>
-          <p className="section-subtitle">
-            Discover our comprehensive range of premium event services designed to create unforgettable experiences
-          </p>
-          <div className="services-grid">
-            <div className="service-card">
-              <div className="service-card-content">
-                <div className="service-icon">
-                  <Calendar size={40} />
+          <div className="section-header-modern">
+            <div className="section-badge">
+              <Sparkles size={16} />
+              <span>Our Services</span>
+            </div>
+            <h2>Premium Event Solutions</h2>
+            <p>Comprehensive services designed to make your event extraordinary</p>
+          </div>
+
+          <div className="services-grid-modern">
+            <div className="service-card-modern service-card-primary">
+              <div className="service-card-header">
+                <div className="service-icon-modern">
+                  <Tent size={40} />
                 </div>
-                <h3>Event Rentals</h3>
-                <p>Complete event rental solutions including premium furniture, elegant decor, and professional equipment for any occasion.</p>
-                <Link to="/event-rentals" className="btn btn-outline">
-                  Learn More <ArrowRight size={16} />
-                </Link>
+                <div className="service-badge">Most Popular</div>
               </div>
+              <h3>Luxury Marquee Rentals</h3>
+              <p>Premium weather-resistant marquees perfect for weddings, corporate events, and outdoor celebrations. Professional setup and takedown included.</p>
+              <ul className="service-features">
+                <li><CheckCircle size={16} /> Weather-resistant materials</li>
+                <li><CheckCircle size={16} /> Professional installation</li>
+                <li><CheckCircle size={16} /> Multiple sizes available</li>
+                <li><CheckCircle size={16} /> Same-day setup</li>
+              </ul>
+              <Link to="/book-marquee" className="service-cta-primary">
+                Book Now <ArrowRight size={18} />
+              </Link>
             </div>
 
-            <div className="service-card">
-              <div className="service-card-content">
-                <div className="service-icon">
+            <div className="service-card-modern">
+              <div className="service-card-header">
+                <div className="service-icon-modern">
+                  <Video size={40} />
+                </div>
+              </div>
+              <h3>360° Videobooth Experience</h3>
+              <p>Cutting-edge 360° video technology that captures unforgettable moments from every angle. Perfect for creating viral-worthy content.</p>
+              <ul className="service-features">
+                <li><CheckCircle size={16} /> 4K video quality</li>
+                <li><CheckCircle size={16} /> Instant social sharing</li>
+                <li><CheckCircle size={16} /> Custom branding options</li>
+                <li><CheckCircle size={16} /> Professional operator</li>
+              </ul>
+              <Link to="/book-videobooth" className="service-cta">
+                Book Now <ArrowRight size={18} />
+              </Link>
+            </div>
+
+            <div className="service-card-modern">
+              <div className="service-card-header">
+                <div className="service-icon-modern">
                   <Zap size={40} />
                 </div>
-                <h3>Professional Lighting</h3>
-                <p>Transform your venue with our state-of-the-art lighting systems, intelligent controls, and expert design services.</p>
-                <Link to="/lighting" className="btn btn-outline">
-                  Learn More <ArrowRight size={16} />
-                </Link>
               </div>
-            </div>
-
-            <div className="service-card">
-              <div className="service-card-content">
-                <div className="service-icon">
-                  <Users size={40} />
-                </div>
-                <h3>360° Spin Booth</h3>
-                <p>Capture unforgettable moments with our cutting-edge 360° spin video booth technology and instant sharing capabilities.</p>
-                <Link to="/spin-booth" className="btn btn-outline">
-                  Learn More <ArrowRight size={16} />
-                </Link>
-              </div>
+              <h3>Professional Lighting</h3>
+              <p>Transform your venue atmosphere with our expert lighting design and state-of-the-art equipment for any mood or theme.</p>
+              <ul className="service-features">
+                <li><CheckCircle size={16} /> Custom lighting design</li>
+                <li><CheckCircle size={16} /> LED technology</li>
+                <li><CheckCircle size={16} /> Wireless control</li>
+                <li><CheckCircle size={16} /> Expert technicians</li>
+              </ul>
+              <Link to="/lighting" className="service-cta">
+                Learn More <ArrowRight size={18} />
+              </Link>
             </div>
           </div>
         </div>
